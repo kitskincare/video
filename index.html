@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vídeo Centralizado</title>
+  <title>Vídeo Adaptado e Centralizado</title>
   <style>
-    /* Remove margens e define altura total */
+    /* Remove margens e preenche a tela */
     html, body {
       margin: 0;
       padding: 0;
@@ -15,28 +15,35 @@
       align-items: center;
       justify-content: center;
     }
-    /* Container responsivo para o vídeo */
-    .video-container {
+    
+    /* Container para centralizar o vídeo */
+    .video-wrapper {
       width: 80%;
-      max-width: 800px; /* tamanho máximo para telas maiores */
+      max-width: 500px; /* Máximo para telas maiores */
+      padding: 10px;
+      box-sizing: border-box;
     }
+    
     /* Estilização do vídeo */
     video {
       width: 100%;
       height: auto;
-      border: 2px solid #fff;
-      border-radius: 8px;
+      display: block;
+      border: 2px solid #fff;  /* Opcional: borda para destaque */
+      border-radius: 8px;      /* Opcional: cantos arredondados */
     }
-    /* Ajustes para smartphones */
+    
+    /* Ajuste para dispositivos móveis */
     @media (max-width: 600px) {
-      .video-container {
+      .video-wrapper {
         width: 95%;
+        max-width: 300px; /* Reduz um pouco mais em telas pequenas */
       }
     }
   </style>
 </head>
 <body>
-  <div class="video-container">
+  <div class="video-wrapper">
     <video controls autoplay muted loop>
       <source src="video-fundo.mp4" type="video/mp4">
       Seu navegador não suporta a exibição de vídeo.
