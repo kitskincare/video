@@ -1,49 +1,35 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vídeo Adaptado e Centralizado</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vídeo Centralizado</title>
   <style>
-    /* Remove margens e preenche a tela */
+    /* Remove margens e centraliza o conteúdo */
     html, body {
       margin: 0;
       padding: 0;
       height: 100%;
       background-color: #111;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
     }
-    
-    /* Container para centralizar o vídeo */
-    .video-wrapper {
-      width: 80%;
-      max-width: 500px; /* Máximo para telas maiores */
-      padding: 10px;
-      box-sizing: border-box;
+    /* Container do vídeo com tamanho máximo menor */
+    .video-container {
+      width: 90%;
+      max-width: 300px;  /* Altere esse valor para deixar o vídeo menor */
     }
-    
-    /* Estilização do vídeo */
+    /* Estilo para o vídeo */
     video {
       width: 100%;
       height: auto;
       display: block;
-      border: 2px solid #fff;  /* Opcional: borda para destaque */
-      border-radius: 8px;      /* Opcional: cantos arredondados */
-    }
-    
-    /* Ajuste para dispositivos móveis */
-    @media (max-width: 600px) {
-      .video-wrapper {
-        width: 95%;
-        max-width: 300px; /* Reduz um pouco mais em telas pequenas */
-      }
     }
   </style>
 </head>
 <body>
-  <div class="video-wrapper">
+  <div class="video-container">
     <video controls autoplay muted loop>
       <source src="video-fundo.mp4" type="video/mp4">
       Seu navegador não suporta a exibição de vídeo.
@@ -51,4 +37,5 @@
   </div>
 </body>
 </html>
+
 
