@@ -3,41 +3,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página com Fundo em Vídeo</title>
+  <title>Vídeo Centralizado</title>
   <style>
-    body, html {
+    /* Remove margens e define altura total */
+    html, body {
       margin: 0;
       padding: 0;
       height: 100%;
-      overflow: hidden;
+      background-color: #111;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    .video-background {
-      position: fixed;
-      right: 0;
-      bottom: 0;
-      min-width: 100%; 
-      min-height: 100%;
-      z-index: -1;
+    /* Container responsivo para o vídeo */
+    .video-container {
+      width: 80%;
+      max-width: 800px; /* tamanho máximo para telas maiores */
     }
-    .content {
-      position: relative;
-      z-index: 1;
-      color: #fff;
-      text-align: center;
-      top: 50%;
-      transform: translateY(-50%);
-      font-family: Arial, sans-serif;
+    /* Estilização do vídeo */
+    video {
+      width: 100%;
+      height: auto;
+      border: 2px solid #fff;
+      border-radius: 8px;
+    }
+    /* Ajustes para smartphones */
+    @media (max-width: 600px) {
+      .video-container {
+        width: 95%;
+      }
     }
   </style>
 </head>
 <body>
-  <video autoplay muted loop class="video-background">
-    <source src="seu-video.mp4" type="video/mp4">
-    Seu navegador não suporta o elemento de vídeo.
-  </video>
-  <div class="content">
-    <h1>Bem-vindo ao Meu Site</h1>
-    <p>Conteúdo da página</p>
+  <div class="video-container">
+    <video controls autoplay muted loop>
+      <source src="video-fundo.mp4" type="video/mp4">
+      Seu navegador não suporta a exibição de vídeo.
+    </video>
   </div>
 </body>
 </html>
+
